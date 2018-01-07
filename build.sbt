@@ -22,7 +22,4 @@ libraryDependencies ++= Seq(
 	"com.typesafe.play" %% "play-ws-standalone-json" % "1.1.2",
 	"com.typesafe.play" %% "play-ws-standalone-xml" % "1.1.2"
 )
-
-publishTo := Some(Resolver.file("local-maven", new File(Option(System.getenv("MAVEN_REPO")).getOrElse("~/.m2/repository"))))
-
-
+publishTo := Some(Resolver.file("file",  new File(Path.userHome.absolutePath+"/.m2/repository")))
